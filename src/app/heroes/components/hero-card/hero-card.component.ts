@@ -4,7 +4,12 @@ import { Superhero } from '../../interfaces/heroes.interfaces'
 @Component({
   selector: 'app-hero-card',
   templateUrl: './hero-card.component.html',
-  styles: []
+  styles: [`
+  mat-card {
+    margin-top: 2rem;
+  }
+  `
+]
 })
 export class HeroCardComponent {
 
