@@ -5,7 +5,13 @@ import { HeroesService } from '../../services/heroes.service';
 @Component({
   selector: 'app-list',
   templateUrl: './list.component.html',
-  styleUrls: []
+  styles: [
+    `
+    mat-card {
+      margin-top: 1rem;
+    }
+    `
+  ]
 })
 export class ListComponent implements OnInit {
   heroes: Superhero[] = [];
