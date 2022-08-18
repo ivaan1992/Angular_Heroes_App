@@ -23,4 +23,8 @@ export class HeroesService {
   getSuggestions( term: string ): Observable<Superhero[]> {
     return this.http.get<Superhero[]>( `${this.baseUrl}/heroes?q=${ term }&_limit=5` );
   }
+
+  addHero( hero: Superhero ): Observable<Superhero> {
+    return this.http.post<Superhero>( `${ this.baseUrl }/heroes`, hero );
+  }
 }
