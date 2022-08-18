@@ -1,42 +1,56 @@
 <h1>Create A New Hero </h1>
 
-<div fxLayout="row" fxLayoutGap="3rem" >
+<div fxLayout="row"
+     fxLayoutGap="3rem"
+     fxLayout.xs="column">
 
   <div fxFlex="50" fxLayout="column">
 
-    <div fxLayout="row" fxLayoutGap="1rem">
-      <mat-form-field>
+    <div fxLayout="row"
+         fxLayout.xs="column"
+         fxLayoutGap="1rem">
+      <mat-form-field fxFlex="100"
+                      fxLayout.xs="column">
         <mat-label>Superhero</mat-label>
         <input matInput
             type="text"
+            [(ngModel)] ='hero.superhero'
             required>
       </mat-form-field>
 
-      <mat-form-field>
+      <mat-form-field fxFlex="100"
+                      fxLayout.xs="column">
         <mat-label>Alter Ego</mat-label>
         <input matInput
             type="text"
+            [(ngModel)] ='hero.alter_ego'
             required>
       </mat-form-field>
     </div>
 
-    <mat-form-field>
-      <mat-label>First apparition</mat-label>
+    <mat-form-field fxFlex="100"
+                    fxLayout.xs="column">
+      <mat-label>First appearance</mat-label>
       <input matInput
           type="text"
+          [(ngModel)] ='hero.first_appearance'
           required>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field fxFlex="100"
+                    fxLayout.xs="column">
       <mat-label>Characters</mat-label>
       <input matInput
           type="text"
+          [(ngModel)] ='hero.characters'
           required>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field fxFlex="100"
+                    fxLayout.xs="column">
       <mat-label>Creator</mat-label>
-      <mat-select>
+      <mat-select required
+                  [(ngModel)] ='hero.publisher'>
         <mat-option *ngFor="let publisher of publishers"
                       [value]="publisher.id">
               {{ publisher.id }}
@@ -44,16 +58,20 @@
       </mat-select>
     </mat-form-field>
 
-    <mat-form-field>
+    <mat-form-field fxFlex="100"
+                    fxLayout.xs="column">
       <mat-label>Image Url</mat-label>
       <input matInput
           type="url"
+          [(ngModel)] ='hero.alt_img'
           required>
     </mat-form-field>
 
     <br>
 
-    <button mat-flat-button color='primary'>
+    <button mat-flat-button
+            color='primary'
+            (click)="saveInfo()">
       <mat-icon>edit</mat-icon>
       Edit
     </button>

@@ -34,4 +34,11 @@ export class AddHeroComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  saveInfo() {
+
+    if( this.hero.superhero.trim().length === 0 ){
+      return;
+    }
+  }
+
 }
