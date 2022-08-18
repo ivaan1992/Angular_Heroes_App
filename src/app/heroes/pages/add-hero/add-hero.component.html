@@ -69,12 +69,24 @@
 
     <br>
 
-    <button mat-flat-button
-            color='primary'
-            (click)="saveInfo()">
-      <mat-icon>edit</mat-icon>
-      Save
-    </button>
+    <div>
+      <button mat-flat-button
+              color='primary'
+              (click)="saveInfo()">
+        <mat-icon>edit</mat-icon>
+        Save
+      </button>
+      <span class="spacer"></span>
+      <button *ngIf="hero.id"
+              mat-flat-button
+              color='warn'
+              (click)="deleteHero()">
+        <mat-icon>remove</mat-icon>
+        Delete
+      </button>
+
+    </div>
+
 
 
   </div>
