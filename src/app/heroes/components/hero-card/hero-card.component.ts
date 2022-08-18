@@ -7,6 +7,10 @@ import { Superhero } from '../../interfaces/heroes.interfaces'
   styles: [`
   mat-card {
     margin-top: 2rem;
+    height: 80vh;
+  }
+  button {
+    margin-top: 30px;
   }
   `
 ]
