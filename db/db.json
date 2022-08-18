@@ -166,6 +166,24 @@
       "alter_ego": "Norrin Radd",
       "first_appearance": "The Fantastic Four #48",
       "characters": "Norrin Radd"
+    },
+    {
+      "superhero": "Test Hero",
+      "alter_ego": "Ramses",
+      "characters": "",
+      "first_appearance": "20-Mayo-2022",
+      "publisher": "Marvel Comics",
+      "alt_img": "",
+      "id": "IukKPO8"
+    },
+    {
+      "superhero": "New Test Hero",
+      "alter_ego": "",
+      "characters": "",
+      "first_appearance": "",
+      "publisher": "DC Comics",
+      "alt_img": "",
+      "id": "BhWDwvr"
     }
   ]
 }
