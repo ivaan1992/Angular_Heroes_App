@@ -27,4 +27,10 @@ export class HeroesService {
   addHero( hero: Superhero ): Observable<Superhero> {
     return this.http.post<Superhero>( `${ this.baseUrl }/heroes`, hero );
   }
+
+  updateHero( hero: Superhero ): Observable<Superhero> {
+    return this.http.put<Superhero>( `${ this.baseUrl }/heroes/${ hero.id }`, hero );
+  }
+
+
 }
