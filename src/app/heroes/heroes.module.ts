@@ -12,6 +12,7 @@ import { ListComponent } from './pages/list/list.component';
 import { SearchComponent } from './pages/search/search.component';
 import { HeroCardComponent } from './components/hero-card/hero-card.component';
 import { HeroImagePipe } from './pipes/hero-image.pipe';
+import { ConfirmComponent } from './components/confirm/confirm.component';
 
 
 
@@ -24,7 +25,8 @@ import { HeroImagePipe } from './pipes/hero-image.pipe';
     HomeComponent,
     ListComponent,
     HeroCardComponent,
-    HeroImagePipe
+    HeroImagePipe,
+    ConfirmComponent
   ],
   imports: [
     CommonModule,
