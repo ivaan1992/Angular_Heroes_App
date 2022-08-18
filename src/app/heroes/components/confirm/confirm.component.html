@@ -1,0 +1,24 @@
+<h1>Are you really sure?</h1>
+<hr>
+
+<p>
+  You are about to delete {{ data.superhero }} from your heroes list.
+  <br>
+  Do you really want to continue?
+</p>
+
+<div fxLayout="row">
+
+  <button mat-button
+          color="warn"
+          (click)="remove()">
+    Yes! I want to delete it.
+  </button>
+  <span class="spacer"></span>
+
+  <button mat-button
+          (click)="cancel()">
+    Cancel
+  </button>
+
+</div>

@@ -1,4 +1,8 @@
-<h1>Create A New Hero </h1>
+<h1>
+  {{ (hero.id) ? 'Edit' : 'Create New' }}
+  Hero:
+  <small>{{ hero.superhero }}</small>
+</h1>
 
 <div fxLayout="row"
      fxLayoutGap="3rem"
@@ -74,9 +78,11 @@
               color='primary'
               (click)="saveInfo()">
         <mat-icon>edit</mat-icon>
-        Save
+        {{ (hero.id) ? 'Update Hero' : 'Create Hero' }}
       </button>
+
       <span class="spacer"></span>
+
       <button *ngIf="hero.id"
               mat-flat-button
               color='warn'
