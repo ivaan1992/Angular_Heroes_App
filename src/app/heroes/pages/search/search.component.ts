@@ -6,14 +6,19 @@ import { HeroesService } from '../../services/heroes.service';
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: []
+  styles: [`
+    .minimum {
+      width: 50%;
+    }
+  `
+
+  ]
 })
 export class SearchComponent implements OnInit {
 
   term: string = '';
   heroes: Superhero[] = [];
   heroSelected: Superhero | undefined ;
-  error: boolean = false;
 
   constructor( private heroesService: HeroesService ) { }
 
@@ -21,7 +26,6 @@ export class SearchComponent implements OnInit {
   }
 
   search() {
-    this.error = false;
 
     this.heroesService.getSuggestions( this.term )
     .subscribe( heroes => this.heroes = heroes );
