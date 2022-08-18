@@ -7,7 +7,14 @@ import { switchMap } from 'rxjs';
 @Component({
   selector: 'app-add-hero',
   templateUrl: './add-hero.component.html',
-  styleUrls: []
+  styles: [
+    `
+    img {
+      width: 80%;
+      border-radius: 5px;
+    }
+    `
+  ]
 })
 export class AddHeroComponent implements OnInit {
 

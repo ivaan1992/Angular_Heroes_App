@@ -169,21 +169,30 @@
     },
     {
       "superhero": "Test Hero",
-      "alter_ego": "Ramses",
+      "alter_ego": "Random Name",
       "characters": "",
       "first_appearance": "20-Mayo-2022",
       "publisher": "Marvel Comics",
-      "alt_img": "",
+      "alt_img": "https://media.istockphoto.com/vectors/super-heroe-with-red-cape-vector-id1217420465?k=20&m=1217420465&s=612x612&w=0&h=3iAHxx_vxekzz1NxvfseTm75WPv_5qfTY545bY3tj8k=",
       "id": "IukKPO8"
     },
     {
-      "superhero": "New Test Hero",
+      "superhero": "New Hero Random",
+      "alter_ego": "",
+      "characters": "",
+      "first_appearance": "",
+      "publisher": "DC Comics",
+      "alt_img": "https://idunneditorial.com/wp-content/uploads/2016/07/he%CC%81roe1.png",
+      "id": "eE19dqX"
+    },
+    {
+      "superhero": "gdfggfd",
       "alter_ego": "",
       "characters": "",
       "first_appearance": "",
       "publisher": "DC Comics",
       "alt_img": "",
-      "id": "BhWDwvr"
+      "id": "KIcNMNA"
     }
   ]
 }
