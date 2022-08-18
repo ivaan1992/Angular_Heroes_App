@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Publisher, Superhero } from '../../interfaces/heroes.interfaces';
 import { HeroesService } from '../../services/heroes.service';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { switchMap } from 'rxjs';
 
 @Component({
@@ -33,7 +33,8 @@ export class AddHeroComponent implements OnInit {
   }
 
   constructor( private heroesService: HeroesService,
-               private activatedRoute: ActivatedRoute ) { }
+               private activatedRoute: ActivatedRoute,
+               private router: Router) { }
 
   ngOnInit(): void {
 
@@ -58,9 +59,11 @@ export class AddHeroComponent implements OnInit {
       this.heroesService.updateHero( this.hero )
       .subscribe( hero => console.log( 'Updating:', hero ) )
     } else {
+      //Create hero
+
       this.heroesService.addHero( this.hero )
-      .subscribe( resp => {
-        console.log( 'Answer:', resp )
+      .subscribe( hero => {
+        this.router.navigate(['/heroes', hero.id]);
       });
     }
   }
