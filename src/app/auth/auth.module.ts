@@ -5,17 +5,19 @@ import { NgModule } from '@angular/core';
 
 import { LoginComponent } from './pages/login/login.component';
 import { RegisterComponent } from './pages/register/register.component';
+import { MaterialModule } from '../material/material.module';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
   ],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    MaterialModule
   ],
   exports: [
     AuthRoutingModule

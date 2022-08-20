@@ -48,9 +48,14 @@
       <mat-icon>menu</mat-icon>
     </button>
 
-    <span class="spacer"></span>
 
-    <button mat-button>
+
+    <span>Welcome {{ auth.usuario }}</span>
+    <span class="spacer"></span>
+    <button mat-flat-button
+            color="warn"
+            (click)="logout()">
+    <mat-icon>logout</mat-icon>
       Logout
     </button>
 
